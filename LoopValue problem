@@ -1,0 +1,40 @@
+package com.infy;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.apache.jasper.tagplugins.jstl.core.Set;
+
+public class Test {
+	static Integer loopvalue = 0;
+
+	public static Map<String, Integer> getCBIData(Map<String, Integer> dataMap) {
+
+		//dataMap = new HashMap<String, Integer>();
+
+		dataMap.put("VENU" + loopvalue, 10011);
+		dataMap.put("KUKKU" + loopvalue, 3242);
+		loopvalue++;
+
+		return dataMap;
+
+	}
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		HashMap<String, Integer> dataMap = new HashMap<String, Integer>();
+		Test t = new Test();
+		System.out.println("ghg          " + t.getCBIData(dataMap));
+		System.out.println("ghg          " + t.getCBIData(dataMap));
+
+		
+		System.out.println(dataMap);
+
+		System.out.println("v----------------"+dataMap.get("VENU1"));
+		System.out.println("v------------" + dataMap.get("KUKKU1"));
+
+	}
+
+}
